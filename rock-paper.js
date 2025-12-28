@@ -60,9 +60,7 @@ const score = JSON.parse(localStorage.getItem('score')) || {
        updateScore();
 
        document.querySelector('.page-result').innerHTML = result;
-       document.querySelector('.page-moves').innerHTML = `You: <img src="${playerMove}-emoji.png" class="move-icon"> 
-       Computer: <img src="${pcMove}-emoji.png" class="move-icon">
-       `;
+       document.querySelector('.page-moves').innerHTML = `<p> You: ${playerMove}, Computer: ${pcMove}`
     }
     function pickPcMove() {
       const randomNumber1 = Math.random()
@@ -136,4 +134,5 @@ function pickPlayerMove() {
         pickPcMove()
         runCode('Scissors')
       }
+
     })
